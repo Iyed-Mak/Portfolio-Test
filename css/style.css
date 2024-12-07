@@ -1,0 +1,322 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+   
+}
+:root{
+    --blue-color: #1e30f3;
+    --blue-hover-color: #1a29cf;
+    --black-color: #000;
+    --black-clair-color: #343a3f;
+    --white-color: #fff;
+    --section-color: #f8f9fa;
+    --magenta-color: #e32e89;
+    --gradiant-color: -webkit-linear-gradient(315deg, #1e30f3 0%, #e21e80 100%);
+}
+h1{
+    font-weight: 700 !important;
+    width: fit-content;
+    background: var(--gradiant-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+ 
+}
+section{
+    background: var(--section-color);
+}
+section h1{
+    font-size: 3rem;
+}
+/* start Navigation */
+nav .navbar-collapse{
+    justify-content: flex-end !important;
+}
+nav .navbar-brand{
+    font-weight: 700;
+    color: var(--blue-color);
+    cursor: default;
+}
+nav .navbar-brand:hover{
+    color: var(--blue-color);
+}
+
+nav .nav-link{
+    font-weight: 600;
+}
+/* end Navigation */
+/* start Mast Header */
+header{
+    min-height: calc(100vh - 72px);
+}
+header .card{
+    border: none !important;
+}
+header .card-body .badge{
+    background: var(--gradiant-color) !important ;
+}
+header p{
+    font-size: 1.5rem;
+}
+header .card-body h1{
+    font-size: 4rem;
+}
+@media  (max-width: 400px) {
+    header .card-body h1{
+        font-size: 2.5rem;
+    }
+    header .card-body a:last-of-type{
+        margin-top: 5px !important;
+    }
+}
+header .card-body a{
+    font-weight: 800;
+}
+header .card-body a:first-of-type{
+    background-color: var(--blue-color) !important;
+}
+header .card-body a:first-of-type:hover{
+    background-color: var(--blue-hover-color) !important;
+}
+header .card-body a:last-of-type{
+    border: 1px solid var(--black-color);
+}
+header .card-body a:last-of-type:hover{
+    background-color: var(--black-color);
+    color: var(--white-color);
+}
+header .bg-img {
+    width: 92%;
+    height: 72vh;
+    background: var(--gradiant-color);
+    border-radius: 12%;
+    position: relative;
+}  
+header .bg-img img{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 115%;
+}
+/* end Mast Header */
+/* start About */
+#about{
+    margin-top: 10vh;
+    min-height: 50vh;
+}
+
+#about svg{
+    font-size: 2.2rem;
+}
+#about a{
+    color: rebeccapurple;
+}
+/* end About */
+/* start footer */
+footer{
+    min-height: 10vh;
+}
+footer a{
+    font-size: .9rem;
+    color: var(--blue-color) !important;
+}
+/* end footer */
+/* Resume + Projects */
+
+#resume .card-body,
+#projects .card-body{
+  border-radius: inherit;
+  background-color: var(--section-color);
+}
+#resume .card-body h5,
+#projects .card-body h5{
+  color: var(--blue-color);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+#resume .card-body span,
+#projects .card-body span{
+  color: var(--black-color) !important;
+  font-weight: 600;
+}
+
+/* start Resume */
+#resume{
+    min-height: 320vh;
+    padding-bottom: 10vh;
+}
+#resume h2{
+    font-weight: 700;
+    color: var(--blue-color);
+}
+#resume .card{
+    min-height: 12rem;
+    border-radius: 1rem;
+ }
+#resume button{
+    background-color: var(--blue-color);
+    color: var(--white-color);
+}
+#resume button:hover{
+    background-color: var(--blue-hover-color);
+}
+@media (max-width: 450px) {
+    #resume h2,
+    #projects h2{
+        font-size: 1.2rem !important;
+    }
+    .Res{
+        display: none;
+    }
+}
+#resume .card-body p{
+   font-size: .9rem;
+   line-height: 1.8;
+}
+
+#resume .Professional h2{
+    background: var(--gradiant-color);
+    background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    font-size: 1.8rem;
+}
+#resume .Professional div{
+    background: var(--gradiant-color) !important;
+    padding: .8rem;
+    border-radius: .5rem;
+}
+#resume .Professional div svg{
+  font-size: 1.5rem;
+  color: var(--white-color);
+}
+
+/* end Resume */
+/* Start Projects */
+#projects {
+    min-height: 150vh;
+}
+#projects .card{
+    min-height: 25rem !important;
+    border-radius: 1rem;
+}
+#projects h2{
+    font-weight: 700;
+    color: var(--black-clair-color);
+}
+#projects .card-body{
+    background-color: transparent;
+ }
+#projects .img-project{
+    height: 100%;
+    background-color: var( --black-clair-color);
+    border-bottom-right-radius: inherit;
+    border-top-right-radius: inherit;
+    position: relative;
+}
+#projects .img-project::before{
+    content: "300 X 400";
+    color: var(--white-color);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 1.5rem;
+    opacity: .5;
+}
+#projects .card-body p{
+   font-size: 1rem;
+   line-height: 1.8;
+}
+@media screen and (max-width: 768px) {
+    #projects .img-project{
+        height: 50%;
+        border-bottom-right-radius: inherit;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: inherit;
+    }
+    #projects .card{
+        margin-bottom: 10rem;
+    }
+}
+#projects .fluid-container div{
+    min-height: 45vh;
+    background: var(--gradiant-color);
+}
+#projects .fluid-container h1{
+    -webkit-text-fill-color: var(--white-color);
+    font-size: 3.5rem;
+}
+@media screen and (max-width: 768px) {
+    #projects .fluid-container h1{
+        font-size: 2rem;
+    }
+}
+#projects .fluid-container button{
+    border-color: var(--white-color);
+    color: var(--white-color);
+    font-weight: 600;
+}
+#projects .fluid-container button:hover{
+    color: var(--black-color);
+    background: var(--white-color);
+}
+/* end Projects */
+/* Start contact */
+#contact{
+    min-height: 110vh;
+    margin: 10vh 20vh 0;
+    border-radius: 1rem;
+}
+@media screen and (max-width: 768px) {
+    #contact{
+        min-height: 100vh;
+        margin: 10vh 10vh 0;
+    }
+}
+@media screen and (max-width: 576px) {
+    #contact{
+        min-height: 100vh;
+        margin: 10vh 2vh 0;
+    }
+}
+
+#contact .icon{
+    padding: .8rem;
+    background: var(--gradiant-color);
+    
+}
+#contact svg{
+    font-size: 1.5rem;
+    color: var(--white-color);
+}
+#contact h2{
+    font-weight: 700;
+    font-size: 2.8rem;
+}
+#contact p{
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+#contact .form-floating,
+#contact button{
+    min-width: 50%;
+}
+@media screen and (max-width: 1200px) {
+    #contact .form-floating,
+    #contact button{
+        min-width: 90%;
+    }
+
+    
+}
+#contact button{
+    background-color: var(--blue-color);
+    color: var(--white-color);
+    
+}
+/* end contact */
+
+
